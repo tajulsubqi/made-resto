@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Spicy seasoned seafood noodles",
+    "price": 43000,
+    "stocks": 20,
+    "image": "/img/hot dish/mie seafood.png"
+  },
+  {
+    "name": "Salted Pasta with mushroom sauce",
+    "price": 35000,
+    "stocks": 20,
+    "image": "/img/hot dish/mie.png"
+  },
+  {
+    "name": "Beef dumpling in hot and sour soup",
+    "price": 65000,
+    "stocks": 20,
+    "image": "/img/hot dish/dumpling.png"
+  },
+  {
+    "name": "Healty noodle with spinach leaf",
+    "price": 65000,
+    "stocks": 20,
+    "image": "/img/hot dish/mie sehat.png"
+  },
+  {
+    "name": "Hot spicy fried rice with omlete",
+    "price": 57000,
+    "stocks": 20,
+    "image": "/img/hot dish/nasi pedas.png"
+  },
+  {
+    "name": "Spicy instant noodle with special omelette",
+    "price": 45000,
+    "stocks": 20,
+    "image": "/img/hot dish/mie instan.png"
+  }
+]
