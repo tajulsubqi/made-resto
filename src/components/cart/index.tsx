@@ -1,16 +1,14 @@
+"use client"
+import useCalculateTotalPrice from "@/components/cart/hooks/useSubtotal"
 import RightDrawer from "../drawer/RightDrawer"
 import CartItem from "./CartItem"
 
 const Cart = () => {
+  const calculateTotalPrice = useCalculateTotalPrice()
   return (
     <>
       <div className="h-[60%] overflow-auto pe-1" style={{ scrollbarWidth: "none" }}>
         <div className="my-5 flex flex-col gap-7">
-          <CartItem showPayment={true} />
-          <CartItem showPayment={true} />
-          <CartItem showPayment={true} />
-          <CartItem showPayment={true} />
-          <CartItem showPayment={true} />
           <CartItem showPayment={true} />
         </div>
 
@@ -23,7 +21,7 @@ const Cart = () => {
 
           <div className="flex justify-between">
             <p className="text-slate-300">Sub Total</p>
-            <p>Rp. 3000</p>
+            <p>Rp. {calculateTotalPrice()}</p>
           </div>
 
           <RightDrawer />

@@ -22,7 +22,7 @@ const Sidebar = () => {
     <>
       <div className="flex flex-col w-24 h-full fixed p-3 bg-gray-900 text-white justify-between">
         <div className="flex flex-col gap-10">
-          <div className="flex items-center justify-center h-16">
+          <div className="flex items-center justify-center mt-5 h-16">
             <Image
               src="/icons/bx_bxs-store-alt.png"
               width={100}
@@ -33,7 +33,7 @@ const Sidebar = () => {
           </div>
 
           <Link
-            href="/"
+            href="/home"
             className={`flex items-center justify-center h-full text-[${
               isActiveHome ? "white" : "#FFCA40"
             }] ${isActiveHome ? "bg-[#FFCA40]" : ""} rounded-lg`}
@@ -43,7 +43,7 @@ const Sidebar = () => {
           </Link>
 
           <Link
-            href="/"
+            href="/setting"
             className={`flex items-center justify-center h-full text-[${
               isActiveSettings ? "white" : "#FFCA40"
             }] ${isActiveSettings ? "bg-[#FFCA40]" : ""} rounded-lg`}

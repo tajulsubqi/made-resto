@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Ice Vanilla",
+    "price": 43000,
+    "stocks": 20,
+    "image": "/img/cold dish/ice vanilla.png",
+    "type": "cold"
+  },
+  {
+    "name": "Ice vanilla colorful",
+    "price": 35000,
+    "stocks": 20,
+    "image": "/img/cold dish/ice vanilla colorful.png",
+    "type": "cold"
+  },
+  {
+    "name": "Ice Dream coffe",
+    "price": 65000,
+    "stocks": 20,
+    "image": "/img/cold dish/coffe dream.png",
+    "type": "cold"
+  },
+  {
+    "name": "Iced red velvet",
+    "price": 65000,
+    "stocks": 20,
+    "image": "/img/cold dish/ice red.png",
+    "type": "cold"
+  },
+  {
+    "name": "Angsle",
+    "price": 57000,
+    "stocks": 20,
+    "image": "/img/cold dish/angsle.png",
+    "type": "cold"
+  },
+  {
+    "name": "Daluman",
+    "price": 45000,
+    "stocks": 20,
+    "image": "/img/cold dish/daluman.png",
+    "type": "cold"
+  }
+]

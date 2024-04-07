@@ -1,14 +1,20 @@
 import Image from "next/image"
 import React from "react"
-import hotDishes from "./mocks/hot_dishes.json"
+import {  useSelector } from "react-redux"
+
+import { Product } from "@/interfaces/product"
+import { RootState } from "@/lib/Store"
+import DishButton from "@/lib/features/DishButton"
 
 const HotDishes = () => {
+  const hotDishesData = useSelector((state: RootState) => state.hotDishes.hotDishes)
+
   return (
     <>
       <div className="grid grid-cols-3 gap-6 mt-20">
-        {hotDishes.map((item) => (
+        {hotDishesData.map((item: Product) => (
           <>
-            <div className="relative bg-gray-900 w-72 h-80 rounded-lg mb-10">
+            <div className="relative bg-gray-900 w-72 h-96 rounded-lg mb-10">
               <Image
                 src={item.image}
                 alt="..."
@@ -22,6 +28,11 @@ const HotDishes = () => {
                   Rp. {item.price.toLocaleString("id-ID")}
                 </p>
                 <p className="text-md text-slate-400">{item.stocks} Bowls available</p>
+
+                {/* <button className="w-1/2 text-slate-800 font-bold bg-yellow-300 py-2 mt-2 rounded-lg">
+                  add
+                </button> */}
+                <DishButton dish={item} />
               </div>
             </div>
           </>

@@ -10,6 +10,7 @@ import SearchIcon from "@mui/icons-material/Search"
 import { InputBase, alpha, styled } from "@mui/material"
 import HotDishes from "@/components/menus/hot_dishes"
 import ColdDishes from "@/components/menus/cold_dishes"
+import RightBar from "@/components/RightBar"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -56,62 +57,67 @@ const Home = () => {
   }
 
   return (
-    <div className="flex flex-col  h-screen ms-28">
-      <h1 className="font-semibold text-3xl px-4 py-5">Made Resto</h1>
+    <>
+      <div className="flex">
+        <div className="flex flex-col  h-screen ms-28">
+          <h1 className="font-semibold text-3xl px-4 py-5">Made Resto</h1>
 
-      <div className="flex justify-between mt-4">
-        <CurrentDate />
-        <Search>
-          <SearchIconWrapper>
-            <SearchIcon />
-          </SearchIconWrapper>
-          <StyledInputBase
-            placeholder="Search for food,coffe,etc..."
-            inputProps={{ "aria-label": "search" }}
-          />
-        </Search>
-      </div>
+          <div className="flex justify-between mt-4">
+            <CurrentDate />
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search for food,coffe,etc..."
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
+          </div>
 
-      <Box sx={{ width: "100%", color: "white" }}>
-        <TabContext value={value}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList
-              onChange={handleChange}
-              aria-label="lab API tabs example"
-              textColor="inherit"
-              sx={{
-                "& .Mui-selected": {
-                  color: "#ff9800",
-                },
-              }}
-            >
-              <Tab label="Hot Dishes" value="1" />
-              <Tab label="Cold Dishes" value="2" />
-              <Tab label="Soup" value="3" />
-              <Tab label="Grill" value="4" />
-              <Tab label="Appetizer" value="5" />
-              <Tab label="Dessert" value="6" />
-            </TabList>
+          <Box sx={{ width: "100%", color: "white" }}>
+            <TabContext value={value}>
+              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+                <TabList
+                  onChange={handleChange}
+                  aria-label="lab API tabs example"
+                  textColor="inherit"
+                  sx={{
+                    "& .Mui-selected": {
+                      color: "#ff9800",
+                    },
+                  }}
+                >
+                  <Tab label="Hot Dishes" value="1" />
+                  <Tab label="Cold Dishes" value="2" />
+                  <Tab label="Soup" value="3" />
+                  <Tab label="Grill" value="4" />
+                  <Tab label="Appetizer" value="5" />
+                  <Tab label="Dessert" value="6" />
+                </TabList>
+              </Box>
+              <TabPanel value="1">
+                <div>
+                  <h3 className="text-lg">Choose Dishes</h3>
+                  <HotDishes />
+                </div>
+              </TabPanel>
+              <TabPanel value="2">
+                <div>
+                  <h3 className="text-lg">Choose Dishes</h3>
+                  <ColdDishes />
+                </div>
+              </TabPanel>
+              <TabPanel value="3">Item Three</TabPanel>
+              <TabPanel value="4">Item 4</TabPanel>
+              <TabPanel value="5">Item 5</TabPanel>
+              <TabPanel value="6">Item 6</TabPanel>
+            </TabContext>
           </Box>
-          <TabPanel value="1">
-            <div>
-              <h3 className="text-lg">Choose Dishes</h3>
-              <HotDishes />
-            </div>
-          </TabPanel>
-          <TabPanel value="2">
-            <div>
-              <h3 className="text-lg">Choose Dishes</h3>
-              <ColdDishes />
-            </div>
-          </TabPanel>
-          <TabPanel value="3">Item Three</TabPanel>
-          <TabPanel value="4">Item 4</TabPanel>
-          <TabPanel value="5">Item 5</TabPanel>
-          <TabPanel value="6">Item 6</TabPanel>
-        </TabContext>
-      </Box>
-    </div>
+        </div>
+        <RightBar />
+      </div>
+    </>
   )
 }
 
