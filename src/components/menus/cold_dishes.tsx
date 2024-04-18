@@ -1,14 +1,31 @@
+"use client"
 import Image from "next/image"
-import React from "react"
-import coldDishes from "./mocks/cold_dishes.json"
+import API from "@/lib/axiosInstance/API"
+import { Data } from "@/types"
+import { useEffect, useState } from "react"
+import AddCartButton from "../utilities/AddCartButton"
 
 const ColdDishes = () => {
+  const [coldDishesData, setColdDishesData] = useState<Data[]>([])
+
+  const fetchData = async () => {
+    const response = await API.get("/coldDishes")
+    setColdDishesData(response.data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <>
       <div className="grid grid-cols-3 gap-6 mt-20">
-        {coldDishes.map((item) => (
+        {coldDishesData.map((item: Data) => (
           <>
-            <div className="relative bg-gray-900 w-72 h-80 rounded-lg mb-10">
+            <div
+              key={item.id}
+              className="relative bg-gray-900 w-72 h-96 rounded-lg mb-10"
+            >
               <Image
                 src={item.image}
                 alt="..."
@@ -21,7 +38,13 @@ const ColdDishes = () => {
                 <p className="text-lg  font-semibold">
                   Rp. {item.price.toLocaleString("id-ID")}
                 </p>
-                <p className="text-md text-slate-400">{item.stocks} Bowls available</p>
+                <p className="text-md text-slate-400">
+                  <span className="text-yellow-300">{item.stock}</span> Bowls available
+                </p>
+
+                <div className="absolute bottom-6">
+                  <AddCartButton />
+                </div>
               </div>
             </div>
           </>

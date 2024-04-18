@@ -1,0 +1,83 @@
+{
+  "coldDishes": [
+    {
+      "id": 1,
+      "name": "Ice Vanilla",
+      "price": 43000,
+      "stock": 20,
+      "image": "/img/cold dish/ice vanilla.png"
+    },
+    {
+      "id": 2,
+      "name": "Ice vanilla colorful",
+      "price": 35000,
+      "stock": 20,
+      "image": "/img/cold dish/ice vanilla colorful.png"
+    },
+    {
+      "id": 3,
+      "name": "Ice Dream coffe",
+      "price": 65000,
+      "stock": 20,
+      "image": "/img/cold dish/coffe dream.png"
+    },
+    {
+      "id": 4,
+      "name": "Angsle",
+      "price": 65000,
+      "stock": 20,
+      "image": "/img/cold dish/ice red.png"
+    },
+    {
+      "id": 5,
+      "name": "Daluman",
+      "price": 57000,
+      "stock": 20,
+      "image": "/img/cold dish/angsle.png"
+    }
+  ],
+  "hotDishes": [
+    {
+      "id": 1,
+      "name": "Spicy seasoned seafood noodles",
+      "price": 43000,
+      "stock": 20,
+      "image": "/img/hot dish/mie seafood.png"
+    },
+    {
+      "id": 2,
+      "name": "Salted Pasta with mushroom sauce",
+      "price": 35000,
+      "stock": 20,
+      "image": "/img/hot dish/mie.png"
+    },
+    {
+      "id": 3,
+      "name": "Beef dumpling in hot and sour soup",
+      "price": 65000,
+      "stock": 20,
+      "image": "/img/hot dish/dumpling.png"
+    },
+    {
+      "id": 4,
+      "name": "Healty noodle with spinach leaf",
+      "price": 65000,
+      "stock": 20,
+      "image": "/img/hot dish/mie sehat.png"
+    },
+    {
+      "id": 5,
+      "name": "Hot spicy fried rice with omlete",
+      "price": 57000,
+      "stock": 20,
+      "image": "/img/hot dish/nasi pedas.png"
+    },
+    {
+      "id": 6,
+      "name": "Spicy instant noodle with special omelette",
+      "price": 45000,
+      "stock": 20,
+      "image": "/img/hot dish/mie instan.png"
+    }
+  ]
+}
