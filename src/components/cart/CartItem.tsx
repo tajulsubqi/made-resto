@@ -1,12 +1,9 @@
 "use client"
-import { useState } from "react"
 import ArrowDropUpRoundedIcon from "@mui/icons-material/ArrowDropUpRounded"
 import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded"
 import DeleteOutlineRoundedIcon from "@mui/icons-material/DeleteOutlineRounded"
 
-const CartItem = ({showPayment}: {showPayment: boolean}) => {
- 
-
+const CartItem = ({ showPayment }: { showPayment: boolean }) => {
   return (
     <div>
       <div>
